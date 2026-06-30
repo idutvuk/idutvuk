@@ -50,7 +50,6 @@
 <img height="31" src="images/badges/docker.png" alt="Docker" 
 <img height="31" src="images/badges/grafana.png" alt="Grafana" />
 <br />
-/>
 <img height="31" src="images/badges/linux.png" alt="GNU/Linux" />
 <img height="31" src="images/badges/git.png" alt="git" />
 <img height="31" src="images/badges/gitlab.png" alt="GitLab CI" />
