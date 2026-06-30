@@ -14,6 +14,7 @@ Regenerate:  python3 scripts/gen_badges.py
 """
 import math
 import os
+import random
 import shutil
 import subprocess
 import tempfile
@@ -173,13 +174,13 @@ def text_img(label, font, color):
     return im
 
 
-def render(name, label, bg, tc, tint, style, fkey, with_text=True):
+def render(name, label, bg, tc, tint, style, fkey, with_text=True, with_icon=True):
     """One static RGBA button frame (icon + optional label)."""
     img = Image.new("RGBA", (W, H), bg + (255,))
     if style in ("shadow", "glossy"):
         img = Image.alpha_composite(img, grad_overlay(style, bg))
     d = ImageDraw.Draw(img)
-    icon = render_icon(name, tint)
+    icon = render_icon(name, tint) if with_icon else None
     pad_l = 5
     tx0 = pad_l + (icon.width + 4 if icon else 0)
     if icon:
@@ -392,9 +393,9 @@ def cute_base(name, label):
     """Full-bleed background (photo / rose pattern) + outlined label."""
     bg = rose_pattern() if name == "mongodb" else load_photo(name)
     d = ImageDraw.Draw(bg)
-    f = fit_font("comic", label, W-8, 18)
-    b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
-    tx = (W-tw)//2 - b[0]; ty = (H-th)//2 - b[1]
+    f = fit_font("comic", label, W-8, 12)
+    b = f.getbbox(label); tw = b[2]-b[0]
+    tx = (W-tw)//2 - b[0]; ty = 1 - b[1]                    # top caption, off the face
     d.text((tx, ty), label, font=f, fill=(255, 255, 255),
            stroke_width=2, stroke_fill=(25, 10, 35))
     d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))
@@ -404,14 +405,20 @@ def cute_base(name, label):
 def anim_cute(name, label):
     base = cute_base(name, label)
     star = sparkle_stamp()
-    spots = [(6, 5), (82, 5), (6, 26), (82, 26), (44, 4)]   # corners + top, off face
-    frames, durs = [], []
-    for k in range(6):
+    rng = random.Random(name)                              # per-badge, deterministic
+    stars = []
+    for _ in range(rng.randint(5, 8)):
+        period = rng.choice([2, 2, 3])
+        stars.append((rng.randint(3, W-4), rng.randint(2, H-3),
+                      period, rng.randint(0, period-1), rng.choice([7, 9, 9, 11])))
+    frames, durs, N = [], [], 8
+    for k in range(N):
         fr = base.copy()
-        for i, (sx, sy) in enumerate(spots):
-            if (i + k) % 2 == 0:                           # gentle twinkle
-                fr.alpha_composite(star, (sx-star.width//2, sy-star.height//2))
-        frames.append(fr); durs.append(170)
+        for sx, sy, period, phase, sz in stars:
+            if (k + phase) % period == 0:                  # desynced twinkle
+                st = star if sz == star.width else star.resize((sz, sz), Image.LANCZOS)
+                fr.alpha_composite(st, (sx-sz//2, sy-sz//2))
+        frames.append(fr); durs.append(150)
     return frames, durs
 
 
@@ -432,7 +439,7 @@ def ribbon_png(name, label, brand, fkey):
 
 def anim_logospin(name, label, bg, tc):
     """In-plane CCW spin of the brand logo; static label kept."""
-    base, _ = render(name, "", bg, tc, tc, "raised", "monaco", with_text=False)
+    base, _ = render(name, "", bg, tc, tc, "raised", "monaco", with_text=False, with_icon=False)
     d = ImageDraw.Draw(base)
     zone = 30                                          # left logo zone width
     maxw = W - zone - 5
