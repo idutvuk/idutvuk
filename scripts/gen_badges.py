@@ -56,7 +56,7 @@ STACK = [
     ("langchain",  "LangChain",  "#1C3C3C", "flat",    "georgia"),
     ("langgraph",  "LangGraph",  "#2F6E5B", "marquee", "trebuchet"),
     ("langfuse",   "Langfuse",   "#0E1117", "sunken",  "jb"),
-    ("docker",     "docker",     "#2496ED", "sweep",   "monaco"),
+    ("docker",     "docker",     "#2496ED", "logospin", "monaco"),
     ("grafana",    "Grafana",    "#F46800", "blink",   "impact"),
     ("linux",      "GNU/Linux",  "#000000", "grey",    "courier"),
     ("git",        "git",        "#F05032", "ribbon",  "monaco"),
@@ -72,7 +72,7 @@ STACK = [
     ("onnx",       "ONNX",       "#5B6770", "grey",    "menlo"),
     ("mongodb",    "MongoDB",    "#47A248", "cute",    "comic"),
 ]
-ANIM = {"sweep", "blink", "marquee", "barber", "spin", "cute"}
+ANIM = {"sweep", "blink", "marquee", "barber", "spin", "cute", "logospin"}
 HAVE_RSVG = shutil.which("rsvg-convert") is not None
 
 
@@ -339,79 +339,96 @@ def anim_spin3d(label, color):
     return frames, durs
 
 
-def kitten_tile(_c=[]):
+BG_DIR = os.path.join(OUT, "_bg")
+
+
+def load_photo(name):
+    img = Image.open(os.path.join(BG_DIR, f"{name}.jpg")).convert("RGBA")
+    if img.size != (W, H):
+        img = img.resize((W, H), Image.LANCZOS)
+    return img
+
+
+def sparkle_stamp(_c=[]):
+    """Glowing yellow-white 4-point star."""
     if _c:
         return _c[0]
-    t = Image.new("RGBA", (24, 24), (0, 0, 0, 0))
-    d = ImageDraw.Draw(t)
-    fur, face, pink = (150, 150, 150), (214, 214, 214), (255, 182, 200)
-    d.polygon([(4, 9), (8, 1), (11, 9)], fill=fur)        # ears
-    d.polygon([(13, 9), (16, 1), (20, 9)], fill=fur)
-    d.polygon([(6, 8), (8, 3), (10, 8)], fill=pink)       # inner ear
-    d.polygon([(14, 8), (16, 3), (18, 8)], fill=pink)
-    d.ellipse([4, 7, 20, 21], fill=face, outline=fur)     # head
-    d.ellipse([8, 12, 10, 15], fill=(20, 20, 20))         # eyes
-    d.ellipse([14, 12, 16, 15], fill=(20, 20, 20))
-    d.polygon([(11, 15), (13, 15), (12, 17)], fill=(230, 110, 140))  # nose
-    for wy in (15, 18):                                   # whiskers
-        d.line([(2, wy), (7, wy-1 if wy > 16 else wy+1)], fill=fur)
-        d.line([(22, wy), (17, wy-1 if wy > 16 else wy+1)], fill=fur)
-    _c.append(t)
-    return t
+    S = 13; c = S//2
+    s = Image.new("RGBA", (S, S), (0, 0, 0, 0)); d = ImageDraw.Draw(s)
+    for r in range(c, 0, -1):                              # soft yellow glow halo
+        a = int(80 * (1 - r/c))
+        d.ellipse([c-r, c-r, c+r, c+r], fill=(255, 224, 110, a))
+    d.line([(c, 1), (c, S-2)], fill=(255, 255, 200, 255))  # star spikes
+    d.line([(1, c), (S-2, c)], fill=(255, 255, 200, 255))
+    d.line([(c-3, c-3), (c+3, c+3)], fill=(255, 240, 150, 150))
+    d.line([(c-3, c+3), (c+3, c-3)], fill=(255, 240, 150, 150))
+    d.ellipse([c-1, c-1, c+1, c+1], fill=(255, 255, 255, 255))
+    _c.append(s)
+    return s
 
 
-def cute_base(name, label, brand):
-    bg = Image.new("RGBA", (W, H), (255, 209, 220, 255))   # pastel pink
-    k = kitten_tile()
-    x = 2
-    while x < W - 2:
-        bg.alpha_composite(k, (x, (H-24)//2))
-        x += 22
-    plate = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(plate).rectangle([6, 8, W-7, H-9], fill=(255, 255, 255, 210))
-    bg.alpha_composite(plate)
+def cute_base(name, label):
+    """Full-bleed photo background + outlined label (no plate, no icon)."""
+    bg = load_photo(name)
     d = ImageDraw.Draw(bg)
-    icon = render_icon(name, brand)
-    pad = 9
-    tx0 = pad + (icon.width + 3 if icon else 0)
-    if icon:
-        bg.alpha_composite(icon, (pad, (H-icon.height)//2))
-    maxw = W - tx0 - 7
-    f = fit_font("comic", label, maxw, 17)
+    f = fit_font("comic", label, W-8, 18)
     b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
-    tx = tx0 + max(0, (maxw-tw)//2) if icon else (W-tw)//2
-    ty = (H-th)//2 - b[1]
-    d.text((tx, ty), label, font=f, fill=(40, 40, 40))
+    tx = (W-tw)//2 - b[0]; ty = (H-th)//2 - b[1]
+    d.text((tx, ty), label, font=f, fill=(255, 255, 255),
+           stroke_width=2, stroke_fill=(25, 10, 35))
     d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))
-    d.line([(1, 1), (W-2, 1)], fill=(255, 240, 245)); d.line([(1, 1), (1, H-2)], fill=(255, 240, 245))
     return bg
 
 
-def anim_cute(name, label, brand):
-    base = cute_base(name, label, brand)
-    spots = [(9, 4), (30, 27), (52, 3), (72, 26), (20, 26), (64, 5), (43, 27)]
+def anim_cute(name, label):
+    base = cute_base(name, label)
+    star = sparkle_stamp()
+    spots = [(10, 6), (34, 25), (58, 5), (78, 24), (22, 26), (70, 7), (46, 27)]
     frames, durs = [], []
     for k in range(6):
-        fr = base.copy(); d = ImageDraw.Draw(fr)
+        fr = base.copy()
         for i, (sx, sy) in enumerate(spots):
-            if (i + k) % 2 == 0:
-                r = 2 if (i + k) % 4 == 0 else 1
-                d.line([(sx-r-1, sy), (sx+r+1, sy)], fill=(255, 255, 255))
-                d.line([(sx, sy-r-1), (sx, sy+r+1)], fill=(255, 255, 255))
-                d.point((sx, sy), fill=(255, 255, 170))
-        frames.append(fr); durs.append(160)
+            ph = (i + k) % 3
+            if ph == 0:
+                continue                                   # off this frame
+            sz = star.width if ph == 1 else max(6, int(star.width*0.6))
+            st = star.resize((sz, sz), Image.LANCZOS)
+            fr.alpha_composite(st, (sx-sz//2, sy-sz//2))
+        frames.append(fr); durs.append(150)
     return frames, durs
 
 
 def ribbon_png(name, label, brand, fkey):
     img, _ = render(name, label, GREY, (10, 10, 10), brand, "grey", fkey)
-    d = ImageDraw.Draw(img)
-    a, b = (W-30, -3), (W+3, 30)                           # diagonal across top-right
-    d.line([a, b], fill=(110, 0, 0), width=12)             # dark border
-    d.line([a, b], fill=(206, 32, 32), width=8)            # red band
-    d.line([(a[0]+1, a[1]+5), (b[0]+1, b[1]+5)], fill=(150, 0, 0), width=1)
-    d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))       # keep crisp frame
+    band = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(band)
+    p1, p2 = (-4, H+3), (W+4, -4)                          # full diagonal /
+    d.line([p1, p2], fill=(110, 0, 0, 255), width=15)      # dark border
+    d.line([p1, p2], fill=(210, 28, 28, 255), width=11)    # red band
+    ang = math.degrees(math.atan2(H, W))
+    tt = text_img("HATE EM", font_at("ablack", 11), (255, 255, 255))
+    tt = tt.rotate(ang, expand=True, resample=Image.BICUBIC)
+    band.alpha_composite(tt, ((W-tt.width)//2, (H-tt.height)//2))
+    img.alpha_composite(band)
+    ImageDraw.Draw(img).rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))
     return img
+
+
+def anim_logospin(name, bg, tint):
+    """2D Y-axis spin of the brand logo (horizontal squash + flip)."""
+    base, _ = render(name, "", bg, tint, tint, "raised", "jb", with_text=False)
+    logo = render_icon(name, (255, 255, 255), h=22)
+    frames, durs, N = [], [], 12
+    for k in range(N):
+        c = math.cos(2*math.pi*k/N)
+        w = max(2, int(logo.width*abs(c)))
+        sc = logo.resize((w, logo.height), Image.LANCZOS)
+        if c < 0:
+            sc = sc.transpose(Image.FLIP_LEFT_RIGHT)
+        sc = ImageEnhance.Brightness(sc).enhance(0.55 + 0.45*abs(c))
+        fr = base.copy()
+        fr.alpha_composite(sc, ((W-w)//2, (H-logo.height)//2))
+        frames.append(fr); durs.append(85)
+    return frames, durs
 
 
 # ---------- dispatch ----------
@@ -434,7 +451,9 @@ def make(name, label, bghex, style, fkey):
         if style == "spin":
             fr, du = anim_spin3d(label, brand); cols = 32
         elif style == "cute":
-            fr, du = anim_cute(name, label, brand); cols = 64
+            fr, du = anim_cute(name, label); cols = 64
+        elif style == "logospin":
+            fr, du = anim_logospin(name, brand, text_color(brand)); cols = 32
         else:
             fr, du = builders[style](name, label, bg, tc, tint, fkey); cols = 48
         save_gif(os.path.join(OUT, f"{name}.gif"), fr, du, cols)
