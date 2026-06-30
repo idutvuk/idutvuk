@@ -1,10 +1,9 @@
 <div align="center">
 
-<img height="86" src="images/wa-title.svg" alt="idutvuk's homepage" />
-
+<img height="306" src="images/hero_logo_smaller.png" alt="idutvuk's homepage" />
 <br />
 
-<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+%26+LLM+agents;" alt="intro" />
+<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+%26+LLM+agents;Watch+Revolver(2005);" alt="intro" />
 
 <sub>📍 Anywhere, Anytime 🐍 (mostly) python dev; RAG &amp; LLM agents</sub>
 
@@ -12,33 +11,6 @@
 
 <br />
 
-<!-- LINKS -->
-<table align="center">
-<tr>
-<td align="center"><img height="78" alt="construction worker" src="images/worker1.gif" /></td>
-<td align="center">
-<a href="https://papka.zip">
-<img height="120" alt="kitty" src="images/kitten.gif" />
-<br />
-<strong>★ Visit My Personal Website ★</strong>
-</a>
-<br />
-<img height="34" alt="Under construction" src="images/under-construction.svg" />
-</td>
-<td align="center"><img height="78" alt="construction worker" src="images/worker3.gif" /></td>
-<td align="center">
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-<strong>Listen to cool music</strong>
-<br /><br />
-<img height="56" alt="Music" src="images/music.svg" />
-</a>
-<br />
-<sub>♫ now playing ♫</sub>
-</td>
-</tr>
-</table>
-
-<!-- DOWNLOAD CHAOS — every link is a rickroll, do NOT click ;) -->
 <div align="center">
 
 <img height="64" alt="worker" src="images/worker4.gif" />
@@ -72,7 +44,6 @@
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🔒 Secure Download</a>
 
 <br />
-<sub><em>(psst — the real site is the kitten ☝️)</em></sub>
 
 </div>
 
