@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="42" viewBox="0 0 820 42" preserveAspectRatio="none" font-family="'Courier New',monospace">
+  <rect width="820" height="42" fill="#000080"/>
+  <rect x="2" y="2" width="816" height="38" fill="none" stroke="#00FF00" stroke-width="1"/>
+  <text font-size="22" fill="#00FF00" y="28" font-weight="bold">
+    <animate attributeName="x" from="820" to="-1100" dur="16s" repeatCount="indefinite"/>
+    ★ Thanks for visiting my homepage! ★ Best viewed in Netscape Navigator 4.0 at 800x600 ★ Sign my guestbook! ★ Made with vim ★
+  </text>
+</svg>
