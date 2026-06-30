@@ -367,25 +367,25 @@ def sparkle_stamp(_c=[]):
 
 
 def rose_pattern():
-    """Seamless tiled rose wallpaper (pink bg, red roses, green leaves)."""
-    bgcol, rose, dark, light, leaf = (
-        (246, 201, 214), (194, 30, 86), (120, 12, 48), (236, 120, 160), (58, 125, 68))
-    T = 22
-    tile = Image.new("RGBA", (T, T), bgcol + (255,))
-    d = ImageDraw.Draw(tile)
-    cx, cy, r = T//2, T//2, 6
-    d.ellipse([cx-2, cy+2, cx-2+5, cy+2+4], fill=leaf)          # leaves
-    d.ellipse([cx-3, cy+3, cx+2, cy+7], fill=leaf)
-    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=rose)             # bloom
-    d.arc([cx-r, cy-r, cx+r, cy+r], 0, 360, fill=dark)
-    d.arc([cx-4, cy-4, cx+4, cy+4], 20, 300, fill=light)        # petal swirl
-    d.arc([cx-2, cy-2, cx+2, cy+2], 60, 340, fill=dark)
-    d.point((cx, cy), fill=dark)
-    pat = Image.new("RGBA", (W, H), bgcol + (255,))
-    for row, ty in enumerate(range(-T, H + T, T)):
-        off = (T//2) if row % 2 else 0                         # brick offset
-        for tx in range(-T + off, W + T, T):
-            pat.alpha_composite(tile, (tx, ty))
+    """Dense rose-bush texture: overlapping red roses on green foliage."""
+    leaf_bg, rose, dark, light, leaf = (
+        (38, 90, 50), (198, 30, 86), (118, 10, 46), (240, 132, 170), (62, 132, 74))
+    pat = Image.new("RGBA", (W, H), leaf_bg + (255,))
+    d = ImageDraw.Draw(pat)
+    rng = random.Random("rose-texture")
+    step = 12
+    for row, cy in enumerate(range(0, H + step, step)):
+        off = (step // 2) if row % 2 else 0
+        for cx in range(off - 2, W + step, step):
+            r = rng.randint(6, 9)
+            d.ellipse([cx-r-2, cy+1, cx-r+3, cy+6], fill=leaf)         # leaves
+            d.ellipse([cx+r-3, cy+1, cx+r+2, cy+6], fill=leaf)
+            d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=rose)            # bloom
+            d.arc([cx-r, cy-r, cx+r, cy+r], 0, 360, fill=dark)
+            rr = max(2, r-3)
+            d.arc([cx-rr, cy-rr, cx+rr, cy+rr], rng.randint(0, 90), 310, fill=light)
+            d.arc([cx-rr+1, cy-rr+1, cx+rr-1, cy+rr-1], rng.randint(0, 90), 280, fill=dark)
+            d.point((cx, cy), fill=dark)
     return pat
 
 
@@ -393,9 +393,11 @@ def cute_base(name, label):
     """Full-bleed background (photo / rose pattern) + outlined label."""
     bg = rose_pattern() if name == "mongodb" else load_photo(name)
     d = ImageDraw.Draw(bg)
-    f = fit_font("comic", label, W-8, 12)
-    b = f.getbbox(label); tw = b[2]-b[0]
-    tx = (W-tw)//2 - b[0]; ty = 1 - b[1]                    # top caption, off the face
+    center = name in ("redis", "mongodb")
+    f = fit_font("comic", label, W-8, 18 if center else 12)
+    b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
+    tx = (W-tw)//2 - b[0]
+    ty = ((H-th)//2 - b[1]) if center else (1 - b[1])      # centered or top caption
     d.text((tx, ty), label, font=f, fill=(255, 255, 255),
            stroke_width=2, stroke_fill=(25, 10, 35))
     d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))
