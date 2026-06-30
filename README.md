@@ -1,25 +1,18 @@
-<!-- ┌─────────────────────────────────────────────────────────────┐ -->
-<!-- │  idutvuk's homepage — best viewed in Netscape Navigator 4.0  │ -->
-<!-- └─────────────────────────────────────────────────────────────┘ -->
-
-<!-- HERO -->
 <div align="center">
 
 <img height="86" src="images/wa-title.svg" alt="idutvuk's homepage" />
 
 <br />
 
-<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=Welcome+to+my+corner+of+the+web!;Python+Backend+%2F+GenAI+Developer;RAG+%26+LLM+agents;Made+with+coffee" alt="intro" />
+<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+%26+LLM+agents;" alt="intro" />
 
-<sub>📍 Moscow, Russia &nbsp;•&nbsp; 🐍 (mostly) python dev &nbsp;•&nbsp; 🤖 RAG &amp; LLM agents</sub>
+<sub>📍 Anywhere, Anytime 🐍 (mostly) python dev; RAG &amp; LLM agents</sub>
 
 </div>
 
 <br />
 
 <!-- LINKS -->
-<div align="center"><img height="48" src="images/wa-links.svg" alt="My Cool Links" /></div>
-
 <table align="center">
 <tr>
 <td align="center"><img height="78" alt="construction worker" src="images/worker1.gif" /></td>
@@ -107,11 +100,6 @@
 
 <!-- VISITOR COUNT -->
 <div align="center">
-
-<img height="48" src="images/wa-visitors.svg" alt="Visitor Count" />
-
-<br /><br />
-
 <img src="https://komarev.com/ghpvc/?username=idutvuk&style=plastic&color=39d353&label=YOU+ARE+VISITOR+%23" alt="Visitor count" />
 
 </div>
@@ -130,7 +118,4 @@
 <img height="31" src="images/b-coffee.svg" alt="Powered by coffee" />
 
 <br /><br />
-
-<sub>© 1998–2026 idutvuk &nbsp;•&nbsp; this page is under eternal construction</sub>
-
 </div>
