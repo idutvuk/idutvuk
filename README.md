@@ -3,7 +3,7 @@
 <img height="306" src="images/hero_logo_smaller.png" alt="idutvuk's homepage" />
 <br />
 
-<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+%26+LLM+agents;Watch+Revolver(2005);" alt="intro" />
+<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+LLM+agents;Watch+Revolver(2005);capable+of+simple+frontend+things;" alt="intro" />
 </div>
 
 <br />
@@ -42,19 +42,19 @@
 <img height="31" src="images/badges/redis.png" alt="Redis" />
 <img height="31" src="images/badges/aiogram.png" alt="aiogram" />
 <img height="31" src="images/badges/qdrant.png" alt="Qdrant" />
+<img height="31" src="images/badges/nginx.png" alt="nginx" />
 <br />
 <img height="31" src="images/badges/langchain.png" alt="LangChain" />
 <img height="31" src="images/badges/langgraph.png" alt="LangGraph" />
 <img height="31" src="images/badges/langfuse.png" alt="Langfuse" />
-
-
+<img height="31" src="images/badges/docker.png" alt="Docker" 
+<img height="31" src="images/badges/grafana.png" alt="Grafana" />
 <br />
-<img height="31" src="images/badges/docker.png" alt="Docker" />
+/>
 <img height="31" src="images/badges/linux.png" alt="GNU/Linux" />
-<img height="31" src="images/badges/nginx.png" alt="nginx" />
 <img height="31" src="images/badges/git.png" alt="git" />
 <img height="31" src="images/badges/gitlab.png" alt="GitLab CI" />
-<img height="31" src="images/badges/grafana.png" alt="Grafana" />
+
 
 <br />
 
