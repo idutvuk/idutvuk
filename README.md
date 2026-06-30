@@ -5,7 +5,7 @@
 
 <img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+%26+LLM+agents;Watch+Revolver(2005);" alt="intro" />
 
-<sub>📍 Anywhere, Anytime 🐍 (mostly) python dev; RAG &amp; LLM agents</sub>
+<sub>🐍 (mostly) python dev | RAG &amp; LLM agents | 📍 Anywhere, Anytime </sub>
 
 </div>
 
@@ -13,12 +13,13 @@
 
 <div align="center">
 
+<img height="64" alt="worker" src="images/worker1.gif" />
 <img height="64" alt="worker" src="images/worker4.gif" />
 &nbsp;
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img height="32" alt="DOWNLOAD" src="images/b-download.svg" /></a>
 &nbsp;
 <img height="64" alt="worker" src="images/worker4.gif" />
-
+<img height="64" alt="worker" src="images/worker3.gif" />
 <br /><br />
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⬇️ DOWNLOAD NOW — 100% FREE</a> &nbsp;◆&nbsp;
