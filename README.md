@@ -8,8 +8,8 @@
 
 ![GitHub Stats](images/wa-stats.svg)
 
-![GitHub stats](https://papka.zip/github_stats/api?username=idutvuk&show_icons=true&include_all_commits=true&count_private=true&hide_rank=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353)
-![Top languages](https://papka.zip/github_stats/api/top-langs/?username=idutvuk&layout=compact&count_private=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353)
+<img height="165" alt="GitHub stats" src="https://papka.zip/github_stats/api?username=idutvuk&show_icons=true&hide_title=true&include_all_commits=true&count_private=true&hide_rank=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" />
+<img height="165" alt="Top languages" src="https://papka.zip/github_stats/api/top-langs/?username=idutvuk&layout=compact&count_private=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" />
 
 **~ main stack ~**
 
