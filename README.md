@@ -19,32 +19,7 @@
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img height="32" alt="DOWNLOAD" src="images/b-download.svg" /></a>
 &nbsp;
 <img height="64" alt="worker" src="images/worker4.gif" />
-<img height="64" alt="worker" src="images/worker3.gif" />
-<br /><br />
 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⬇️ DOWNLOAD NOW — 100% FREE</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🔥 setup_installer_v3.exe</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CLICK HERE !!!</a>
-<br />
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">▶️ FREE DOWNLOAD (no virus)</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#1</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#2</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#3</a>
-<br />
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⭐ NEW!! Premium Crack</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🎁 You are visitor 1,000,000 — CLAIM PRIZE</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🚀 Speed Up Your PC NOW</a>
-<br />
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">✅ Verified Safe Download</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🆓 Free RAM (download more)</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💿 Get RealPlayer</a>
-<br />
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🐱 More Kitten GIFs (12,481 files)</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⬇ Download MP3 (320kbps)</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💥 ONE WEIRD TRICK</a> &nbsp;◆&nbsp;
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🔒 Secure Download</a>
-
-<br />
 
 </div>
 
@@ -63,8 +38,8 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=idutvuk&show_icons=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=idutvuk&layout=compact&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" alt="Top languages" />
+<img height="165" src="https://papka.zip/github_stats/api?username=idutvuk&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" alt="GitHub stats" />
+<img height="165" src="https://papka.zip/github_stats/api/top-langs/?username=idutvuk&layout=compact&count_private=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" alt="Top languages" />
 
 </div>
 
