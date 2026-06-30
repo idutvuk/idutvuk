@@ -43,14 +43,14 @@ FONTS = {
 
 # name, label, brand-color, style, font
 STACK = [
-    ("python",     "python",     "#3776AB", "sweep",   "monaco"),
+    ("python",     "python",     "#3776AB", "cute",    "comic"),
     ("fastapi",    "FastAPI",    "#009688", "sweep",   "menlo"),
     ("sqlalchemy", "SQLAlchemy", "#BB2222", "shadow",  "times"),
-    ("alembic",    "Alembic",    "#6BA81E", "grey",    "georgia"),
+    ("alembic",    "Alembic",    "#6BA81E", "ribbon",  "georgia"),
     ("typst",      "Typst",      "#239DAD", "spin",    "ablack"),
     ("postgresql", "PostgreSQL", "#336791", "double",  "trebuchet"),
-    ("redis",      "Redis",      "#DC382D", "blink",   "ablack"),
-    ("aiogram",    "aiogram",    "#2AABEE", "glossy",  "comic"),
+    ("redis",      "Redis",      "#DC382D", "cute",    "comic"),
+    ("aiogram",    "aiogram",    "#2AABEE", "cute",    "comic"),
     ("qdrant",     "Qdrant",     "#DC244C", "marquee", "verdana"),
     ("nginx",      "nginx",      "#009639", "grey",    "courier"),
     ("langchain",  "LangChain",  "#1C3C3C", "flat",    "georgia"),
@@ -59,7 +59,7 @@ STACK = [
     ("docker",     "docker",     "#2496ED", "sweep",   "monaco"),
     ("grafana",    "Grafana",    "#F46800", "blink",   "impact"),
     ("linux",      "GNU/Linux",  "#000000", "grey",    "courier"),
-    ("git",        "git",        "#F05032", "grey",    "monaco"),
+    ("git",        "git",        "#F05032", "ribbon",  "monaco"),
     ("gitlab",     "GitLab CI",  "#E24329", "barber",  "ablack"),
     ("django",     "django",     "#0C4B33", "double",  "georgia"),
     ("react",      "React",      "#149ECA", "raised",  "jb"),
@@ -70,9 +70,9 @@ STACK = [
     ("caddy",      "Caddy",      "#1F88C0", "grey",    "trebuchet"),
     ("comfyui",    "ComfyUI",    "#6E33C9", "marquee", "comic"),
     ("onnx",       "ONNX",       "#5B6770", "grey",    "menlo"),
-    ("mongodb",    "MongoDB",    "#47A248", "shadow",  "ablack"),
+    ("mongodb",    "MongoDB",    "#47A248", "cute",    "comic"),
 ]
-ANIM = {"sweep", "blink", "marquee", "barber", "spin"}
+ANIM = {"sweep", "blink", "marquee", "barber", "spin", "cute"}
 HAVE_RSVG = shutil.which("rsvg-convert") is not None
 
 
@@ -339,6 +339,81 @@ def anim_spin3d(label, color):
     return frames, durs
 
 
+def kitten_tile(_c=[]):
+    if _c:
+        return _c[0]
+    t = Image.new("RGBA", (24, 24), (0, 0, 0, 0))
+    d = ImageDraw.Draw(t)
+    fur, face, pink = (150, 150, 150), (214, 214, 214), (255, 182, 200)
+    d.polygon([(4, 9), (8, 1), (11, 9)], fill=fur)        # ears
+    d.polygon([(13, 9), (16, 1), (20, 9)], fill=fur)
+    d.polygon([(6, 8), (8, 3), (10, 8)], fill=pink)       # inner ear
+    d.polygon([(14, 8), (16, 3), (18, 8)], fill=pink)
+    d.ellipse([4, 7, 20, 21], fill=face, outline=fur)     # head
+    d.ellipse([8, 12, 10, 15], fill=(20, 20, 20))         # eyes
+    d.ellipse([14, 12, 16, 15], fill=(20, 20, 20))
+    d.polygon([(11, 15), (13, 15), (12, 17)], fill=(230, 110, 140))  # nose
+    for wy in (15, 18):                                   # whiskers
+        d.line([(2, wy), (7, wy-1 if wy > 16 else wy+1)], fill=fur)
+        d.line([(22, wy), (17, wy-1 if wy > 16 else wy+1)], fill=fur)
+    _c.append(t)
+    return t
+
+
+def cute_base(name, label, brand):
+    bg = Image.new("RGBA", (W, H), (255, 209, 220, 255))   # pastel pink
+    k = kitten_tile()
+    x = 2
+    while x < W - 2:
+        bg.alpha_composite(k, (x, (H-24)//2))
+        x += 22
+    plate = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(plate).rectangle([6, 8, W-7, H-9], fill=(255, 255, 255, 210))
+    bg.alpha_composite(plate)
+    d = ImageDraw.Draw(bg)
+    icon = render_icon(name, brand)
+    pad = 9
+    tx0 = pad + (icon.width + 3 if icon else 0)
+    if icon:
+        bg.alpha_composite(icon, (pad, (H-icon.height)//2))
+    maxw = W - tx0 - 7
+    f = fit_font("comic", label, maxw, 17)
+    b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
+    tx = tx0 + max(0, (maxw-tw)//2) if icon else (W-tw)//2
+    ty = (H-th)//2 - b[1]
+    d.text((tx, ty), label, font=f, fill=(40, 40, 40))
+    d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))
+    d.line([(1, 1), (W-2, 1)], fill=(255, 240, 245)); d.line([(1, 1), (1, H-2)], fill=(255, 240, 245))
+    return bg
+
+
+def anim_cute(name, label, brand):
+    base = cute_base(name, label, brand)
+    spots = [(9, 4), (30, 27), (52, 3), (72, 26), (20, 26), (64, 5), (43, 27)]
+    frames, durs = [], []
+    for k in range(6):
+        fr = base.copy(); d = ImageDraw.Draw(fr)
+        for i, (sx, sy) in enumerate(spots):
+            if (i + k) % 2 == 0:
+                r = 2 if (i + k) % 4 == 0 else 1
+                d.line([(sx-r-1, sy), (sx+r+1, sy)], fill=(255, 255, 255))
+                d.line([(sx, sy-r-1), (sx, sy+r+1)], fill=(255, 255, 255))
+                d.point((sx, sy), fill=(255, 255, 170))
+        frames.append(fr); durs.append(160)
+    return frames, durs
+
+
+def ribbon_png(name, label, brand, fkey):
+    img, _ = render(name, label, GREY, (10, 10, 10), brand, "grey", fkey)
+    d = ImageDraw.Draw(img)
+    a, b = (W-30, -3), (W+3, 30)                           # diagonal across top-right
+    d.line([a, b], fill=(110, 0, 0), width=12)             # dark border
+    d.line([a, b], fill=(206, 32, 32), width=8)            # red band
+    d.line([(a[0]+1, a[1]+5), (b[0]+1, b[1]+5)], fill=(150, 0, 0), width=1)
+    d.rectangle([0, 0, W-1, H-1], outline=(0, 0, 0))       # keep crisp frame
+    return img
+
+
 # ---------- dispatch ----------
 
 def make(name, label, bghex, style, fkey):
@@ -348,13 +423,18 @@ def make(name, label, bghex, style, fkey):
     else:
         bg, tc, tint = brand, text_color(brand), text_color(brand)
 
-    if style in ANIM:
+    if style == "ribbon":
+        ribbon_png(name, label, brand, fkey).convert("RGB").save(
+            os.path.join(OUT, f"{name}.png"))
+    elif style in ANIM:
         builders = {
             "sweep": anim_sweep, "blink": anim_blink,
             "marquee": anim_marquee, "barber": anim_barber,
         }
         if style == "spin":
             fr, du = anim_spin3d(label, brand); cols = 32
+        elif style == "cute":
+            fr, du = anim_cute(name, label, brand); cols = 64
         else:
             fr, du = builders[style](name, label, bg, tc, tint, fkey); cols = 48
         save_gif(os.path.join(OUT, f"{name}.gif"), fr, du, cols)

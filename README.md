@@ -15,7 +15,7 @@
 
 [![python](images/badges/python.gif)](https://www.python.org) [![FastAPI](images/badges/fastapi.gif)](https://fastapi.tiangolo.com) [![SQLAlchemy](images/badges/sqlalchemy.png)](https://www.sqlalchemy.org) [![Alembic](images/badges/alembic.png)](https://alembic.sqlalchemy.org) [![Typst](images/badges/typst.gif)](https://typst.app)
 
-[![PostgreSQL](images/badges/postgresql.png)](https://www.postgresql.org) [![Redis](images/badges/redis.gif)](https://redis.io) [![aiogram](images/badges/aiogram.png)](https://aiogram.dev) [![Qdrant](images/badges/qdrant.gif)](https://qdrant.tech) [![nginx](images/badges/nginx.png)](https://nginx.org)
+[![PostgreSQL](images/badges/postgresql.png)](https://www.postgresql.org) [![Redis](images/badges/redis.gif)](https://redis.io) [![aiogram](images/badges/aiogram.gif)](https://aiogram.dev) [![Qdrant](images/badges/qdrant.gif)](https://qdrant.tech) [![nginx](images/badges/nginx.png)](https://nginx.org)
 
 [![LangChain](images/badges/langchain.png)](https://www.langchain.com) [![LangGraph](images/badges/langgraph.gif)](https://langchain-ai.github.io/langgraph/) [![Langfuse](images/badges/langfuse.png)](https://langfuse.com) [![Docker](images/badges/docker.gif)](https://www.docker.com) [![Grafana](images/badges/grafana.gif)](https://grafana.com)
 
@@ -27,6 +27,6 @@
 
 [![Kafka](images/badges/kafka.gif)](https://kafka.apache.org) [![Prometheus](images/badges/prometheus.gif)](https://prometheus.io) [![Caddy](images/badges/caddy.png)](https://caddyserver.com)
 
-[![ComfyUI](images/badges/comfyui.gif)](https://github.com/comfyanonymous/ComfyUI) [![ONNX Runtime](images/badges/onnx.png)](https://onnxruntime.ai) [![MongoDB](images/badges/mongodb.png)](https://www.mongodb.com)
+[![ComfyUI](images/badges/comfyui.gif)](https://github.com/comfyanonymous/ComfyUI) [![ONNX Runtime](images/badges/onnx.png)](https://onnxruntime.ai) [![MongoDB](images/badges/mongodb.gif)](https://www.mongodb.com)
 
 </div>
