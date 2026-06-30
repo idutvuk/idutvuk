@@ -44,7 +44,7 @@ FONTS = {
 
 # name, label, brand-color, style, font
 STACK = [
-    ("python",     "python",     "#3776AB", "cute",    "comic"),
+    ("python",     "python",     "#3776AB", "sweep",   "monaco"),
     ("fastapi",    "FastAPI",    "#009688", "sweep",   "menlo"),
     ("sqlalchemy", "SQLAlchemy", "#BB2222", "shadow",  "times"),
     ("alembic",    "Alembic",    "#6BA81E", "ribbon",  "georgia"),
