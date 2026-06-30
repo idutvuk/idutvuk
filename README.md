@@ -35,8 +35,8 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=idutvuk&show_icons=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=idutvuk&layout=compact&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" alt="Top languages" />
+<img height="165" src="https://papka.zip/github_stats/api?username=idutvuk&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" alt="GitHub stats" />
+<img height="165" src="https://papka.zip/github_stats/api/top-langs/?username=idutvuk&layout=compact&count_private=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" alt="Top languages" />
 
 </div>
 
@@ -53,17 +53,19 @@
 <!-- 88x31 BUTTON WALL -->
 <div align="center">
 
+<sub><b>~ main stack ~</b></sub>
+
 <img height="31" src="images/badges/python.png" alt="python" />
 <img height="31" src="images/badges/fastapi.png" alt="FastAPI" />
-<img height="31" src="images/badges/django.png" alt="Django" />
 <img height="31" src="images/badges/sqlalchemy.png" alt="SQLAlchemy" />
-<img height="31" src="images/badges/grpc.png" alt="gRPC" />
+<img height="31" src="images/badges/alembic.png" alt="Alembic" />
+<img height="31" src="images/badges/aiogram.png" alt="aiogram" />
+<img height="31" src="images/badges/typst.png" alt="Typst" />
 <br />
 <img height="31" src="images/badges/postgresql.png" alt="PostgreSQL" />
 <img height="31" src="images/badges/redis.png" alt="Redis" />
 <img height="31" src="images/badges/mongodb.png" alt="MongoDB" />
 <img height="31" src="images/badges/qdrant.png" alt="Qdrant" />
-<img height="31" src="images/badges/kafka.png" alt="Kafka" />
 <br />
 <img height="31" src="images/badges/langchain.png" alt="LangChain" />
 <img height="31" src="images/badges/langgraph.png" alt="LangGraph" />
@@ -74,13 +76,21 @@
 <img height="31" src="images/badges/docker.png" alt="Docker" />
 <img height="31" src="images/badges/linux.png" alt="GNU/Linux" />
 <img height="31" src="images/badges/nginx.png" alt="nginx" />
-<img height="31" src="images/badges/caddy.png" alt="Caddy" />
 <img height="31" src="images/badges/git.png" alt="git" />
-<br />
 <img height="31" src="images/badges/gitlab.png" alt="GitLab CI" />
-<img height="31" src="images/badges/prometheus.png" alt="Prometheus" />
 <img height="31" src="images/badges/grafana.png" alt="Grafana" />
-<img height="31" src="images/badges/aiogram.png" alt="aiogram" />
+
+<br />
+
+<sub><b>~ sometimes use ~</b></sub>
+
+<img height="31" src="images/badges/django.png" alt="Django" />
+<img height="31" src="images/badges/react.png" alt="React" />
+<img height="31" src="images/badges/kotlin.png" alt="Kotlin" />
+<img height="31" src="images/badges/grpc.png" alt="gRPC" />
+<img height="31" src="images/badges/kafka.png" alt="Kafka" />
+<img height="31" src="images/badges/prometheus.png" alt="Prometheus" />
+<img height="31" src="images/badges/caddy.png" alt="Caddy" />
 
 <br /><br />
 </div>
