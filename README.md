@@ -13,11 +13,11 @@
 
 **~ main stack ~**
 
-[![python](images/badges/python.png)](https://www.python.org) [![FastAPI](images/badges/fastapi.png)](https://fastapi.tiangolo.com) [![SQLAlchemy](images/badges/sqlalchemy.png)](https://www.sqlalchemy.org) [![Alembic](images/badges/alembic.png)](https://alembic.sqlalchemy.org) [![Typst](images/badges/typst.png)](https://typst.app)
+[![python](images/badges/python.gif)](https://www.python.org) [![FastAPI](images/badges/fastapi.gif)](https://fastapi.tiangolo.com) [![SQLAlchemy](images/badges/sqlalchemy.png)](https://www.sqlalchemy.org) [![Alembic](images/badges/alembic.png)](https://alembic.sqlalchemy.org) [![Typst](images/badges/typst.gif)](https://typst.app)
 
-[![PostgreSQL](images/badges/postgresql.png)](https://www.postgresql.org) [![Redis](images/badges/redis.png)](https://redis.io) [![aiogram](images/badges/aiogram.png)](https://aiogram.dev) [![Qdrant](images/badges/qdrant.png)](https://qdrant.tech) [![nginx](images/badges/nginx.png)](https://nginx.org)
+[![PostgreSQL](images/badges/postgresql.png)](https://www.postgresql.org) [![Redis](images/badges/redis.gif)](https://redis.io) [![aiogram](images/badges/aiogram.png)](https://aiogram.dev) [![Qdrant](images/badges/qdrant.png)](https://qdrant.tech) [![nginx](images/badges/nginx.png)](https://nginx.org)
 
-[![LangChain](images/badges/langchain.png)](https://www.langchain.com) [![LangGraph](images/badges/langgraph.png)](https://langchain-ai.github.io/langgraph/) [![Langfuse](images/badges/langfuse.png)](https://langfuse.com) [![Docker](images/badges/docker.png)](https://www.docker.com) [![Grafana](images/badges/grafana.png)](https://grafana.com)
+[![LangChain](images/badges/langchain.png)](https://www.langchain.com) [![LangGraph](images/badges/langgraph.png)](https://langchain-ai.github.io/langgraph/) [![Langfuse](images/badges/langfuse.png)](https://langfuse.com) [![Docker](images/badges/docker.gif)](https://www.docker.com) [![Grafana](images/badges/grafana.gif)](https://grafana.com)
 
 [![GNU/Linux](images/badges/linux.png)](https://kernel.org) [![git](images/badges/git.png)](https://git-scm.com) [![GitLab CI](images/badges/gitlab.png)](https://about.gitlab.com)
 
@@ -25,7 +25,7 @@
 
 [![Django](images/badges/django.png)](https://www.djangoproject.com) [![React](images/badges/react.png)](https://react.dev) [![Kotlin](images/badges/kotlin.png)](https://kotlinlang.org) [![gRPC](images/badges/grpc.png)](https://grpc.io)
 
-[![Kafka](images/badges/kafka.png)](https://kafka.apache.org) [![Prometheus](images/badges/prometheus.png)](https://prometheus.io) [![Caddy](images/badges/caddy.png)](https://caddyserver.com)
+[![Kafka](images/badges/kafka.png)](https://kafka.apache.org) [![Prometheus](images/badges/prometheus.gif)](https://prometheus.io) [![Caddy](images/badges/caddy.png)](https://caddyserver.com)
 
 [![ComfyUI](images/badges/comfyui.png)](https://github.com/comfyanonymous/ComfyUI) [![ONNX Runtime](images/badges/onnx.png)](https://onnxruntime.ai) [![MongoDB](images/badges/mongodb.png)](https://www.mongodb.com)
 
