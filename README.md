@@ -32,45 +32,45 @@
 
 <sub><b>~ main stack ~</b></sub>
 
-<img height="31" src="images/badges/python.png" alt="python" />
-<img height="31" src="images/badges/fastapi.png" alt="FastAPI" />
-<img height="31" src="images/badges/sqlalchemy.png" alt="SQLAlchemy" />
-<img height="31" src="images/badges/alembic.png" alt="Alembic" />
-<img height="31" src="images/badges/typst.png" alt="Typst" />
+<a href="https://www.python.org"><img height="31" src="images/badges/python.png" alt="python" /></a>
+<a href="https://fastapi.tiangolo.com"><img height="31" src="images/badges/fastapi.png" alt="FastAPI" /></a>
+<a href="https://www.sqlalchemy.org"><img height="31" src="images/badges/sqlalchemy.png" alt="SQLAlchemy" /></a>
+<a href="https://alembic.sqlalchemy.org"><img height="31" src="images/badges/alembic.png" alt="Alembic" /></a>
+<a href="https://typst.app"><img height="31" src="images/badges/typst.png" alt="Typst" /></a>
 <br />
-<img height="31" src="images/badges/postgresql.png" alt="PostgreSQL" />
-<img height="31" src="images/badges/redis.png" alt="Redis" />
-<img height="31" src="images/badges/aiogram.png" alt="aiogram" />
-<img height="31" src="images/badges/qdrant.png" alt="Qdrant" />
-<img height="31" src="images/badges/nginx.png" alt="nginx" />
+<a href="https://www.postgresql.org"><img height="31" src="images/badges/postgresql.png" alt="PostgreSQL" /></a>
+<a href="https://redis.io"><img height="31" src="images/badges/redis.png" alt="Redis" /></a>
+<a href="https://aiogram.dev"><img height="31" src="images/badges/aiogram.png" alt="aiogram" /></a>
+<a href="https://qdrant.tech"><img height="31" src="images/badges/qdrant.png" alt="Qdrant" /></a>
+<a href="https://nginx.org"><img height="31" src="images/badges/nginx.png" alt="nginx" /></a>
 <br />
-<img height="31" src="images/badges/langchain.png" alt="LangChain" />
-<img height="31" src="images/badges/langgraph.png" alt="LangGraph" />
-<img height="31" src="images/badges/langfuse.png" alt="Langfuse" />
-<img height="31" src="images/badges/docker.png" alt="Docker" 
-<img height="31" src="images/badges/grafana.png" alt="Grafana" />
+<a href="https://www.langchain.com"><img height="31" src="images/badges/langchain.png" alt="LangChain" /></a>
+<a href="https://langchain-ai.github.io/langgraph/"><img height="31" src="images/badges/langgraph.png" alt="LangGraph" /></a>
+<a href="https://langfuse.com"><img height="31" src="images/badges/langfuse.png" alt="Langfuse" /></a>
+<a href="https://www.docker.com"><img height="31" src="images/badges/docker.png" alt="Docker" /></a>
+<a href="https://grafana.com"><img height="31" src="images/badges/grafana.png" alt="Grafana" /></a>
 <br />
-<img height="31" src="images/badges/linux.png" alt="GNU/Linux" />
-<img height="31" src="images/badges/git.png" alt="git" />
-<img height="31" src="images/badges/gitlab.png" alt="GitLab CI" />
+<a href="https://kernel.org"><img height="31" src="images/badges/linux.png" alt="GNU/Linux" /></a>
+<a href="https://git-scm.com"><img height="31" src="images/badges/git.png" alt="git" /></a>
+<a href="https://about.gitlab.com"><img height="31" src="images/badges/gitlab.png" alt="GitLab CI" /></a>
 
 
 <br />
 
 <sub><b>~ sometimes use ~</b></sub>
 
-<img height="31" src="images/badges/django.png" alt="Django" />
-<img height="31" src="images/badges/react.png" alt="React" />
-<img height="31" src="images/badges/kotlin.png" alt="Kotlin" />
-<img height="31" src="images/badges/grpc.png" alt="gRPC" />
+<a href="https://www.djangoproject.com"><img height="31" src="images/badges/django.png" alt="Django" /></a>
+<a href="https://react.dev"><img height="31" src="images/badges/react.png" alt="React" /></a>
+<a href="https://kotlinlang.org"><img height="31" src="images/badges/kotlin.png" alt="Kotlin" /></a>
+<a href="https://grpc.io"><img height="31" src="images/badges/grpc.png" alt="gRPC" /></a>
 <br/>
-<img height="31" src="images/badges/kafka.png" alt="Kafka" />
-<img height="31" src="images/badges/prometheus.png" alt="Prometheus" />
-<img height="31" src="images/badges/caddy.png" alt="Caddy" />
+<a href="https://kafka.apache.org"><img height="31" src="images/badges/kafka.png" alt="Kafka" /></a>
+<a href="https://prometheus.io"><img height="31" src="images/badges/prometheus.png" alt="Prometheus" /></a>
+<a href="https://caddyserver.com"><img height="31" src="images/badges/caddy.png" alt="Caddy" /></a>
 <br/>
-<img height="31" src="images/badges/comfyui.png" alt="ComfyUI" />
-<img height="31" src="images/badges/onnx.png" alt="ONNX Runtime" />
-<img height="31" src="images/badges/mongodb.png" alt="MongoDB" />
+<a href="https://github.com/comfyanonymous/ComfyUI"><img height="31" src="images/badges/comfyui.png" alt="ComfyUI" /></a>
+<a href="https://onnxruntime.ai"><img height="31" src="images/badges/onnx.png" alt="ONNX Runtime" /></a>
+<a href="https://www.mongodb.com"><img height="31" src="images/badges/mongodb.png" alt="MongoDB" /></a>
 
 <br /><br />
 </div>
