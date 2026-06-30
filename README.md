@@ -20,28 +20,68 @@
 <!-- LINKS -->
 <div align="center"><img height="48" src="images/wa-links.svg" alt="My Cool Links" /></div>
 
-<table width="100%" align="center">
+<table align="center">
 <tr>
-<td align="center" width="50%">
+<td align="center"><img height="78" alt="construction worker" src="images/worker1.gif" /></td>
+<td align="center">
 <a href="https://papka.zip">
-<strong>Visit my personal website</strong>
-<br /><br />
-<img height="80" alt="Globe" src="images/globe.svg" />
-<br /><br />
-<img height="40" alt="Under construction" src="images/under-construction.svg" />
+<img height="120" alt="kitty" src="images/kitten.gif" />
+<br />
+<strong>★ Visit My Personal Website ★</strong>
 </a>
+<br />
+<img height="34" alt="Under construction" src="images/under-construction.svg" />
 </td>
-<td align="center" width="50%">
+<td align="center"><img height="78" alt="construction worker" src="images/worker3.gif" /></td>
+<td align="center">
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 <strong>Listen to cool music</strong>
-<br /><br /><br />
-<img height="56" alt="Music" src="images/music.svg" />
 <br /><br />
-<sub>♫ now playing: a timeless classic ♫</sub>
+<img height="56" alt="Music" src="images/music.svg" />
 </a>
+<br />
+<sub>♫ now playing ♫</sub>
 </td>
 </tr>
 </table>
+
+<!-- DOWNLOAD CHAOS — every link is a rickroll, do NOT click ;) -->
+<div align="center">
+
+<img height="64" alt="worker" src="images/worker4.gif" />
+&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img height="32" alt="DOWNLOAD" src="images/b-download.svg" /></a>
+&nbsp;
+<img height="64" alt="worker" src="images/worker4.gif" />
+
+<br /><br />
+
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⬇️ DOWNLOAD NOW — 100% FREE</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🔥 setup_installer_v3.exe</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CLICK HERE !!!</a>
+<br />
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">▶️ FREE DOWNLOAD (no virus)</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#1</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#2</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💾 Mirror&nbsp;#3</a>
+<br />
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⭐ NEW!! Premium Crack</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🎁 You are visitor 1,000,000 — CLAIM PRIZE</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🚀 Speed Up Your PC NOW</a>
+<br />
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">✅ Verified Safe Download</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🆓 Free RAM (download more)</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💿 Get RealPlayer</a>
+<br />
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🐱 More Kitten GIFs (12,481 files)</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">⬇ Download MP3 (320kbps)</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">💥 ONE WEIRD TRICK</a> &nbsp;◆&nbsp;
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">🔒 Secure Download</a>
+
+<br />
+<sub><em>(psst — the real site is the kitten ☝️)</em></sub>
+
+</div>
 
 <div align="center">
 

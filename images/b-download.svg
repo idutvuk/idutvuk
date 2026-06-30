@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="34" viewBox="0 0 150 34" font-family="'Arial Black',sans-serif">
+  <rect x="1" y="1" width="148" height="32" rx="4" fill="#0a8a0a" stroke="#063f06" stroke-width="2"/>
+  <rect x="3" y="3" width="144" height="13" rx="3" fill="#28c828" opacity="0.6"/>
+  <g>
+    <animate attributeName="opacity" values="1;0.25;1" dur="0.8s" repeatCount="indefinite"/>
+    <polygon points="20,8 20,18 14,18 24,28 34,18 28,18 28,8" fill="#fff200" stroke="#000" stroke-width="1"/>
+    <text x="92" y="23" fill="#ffffff" font-size="16" font-weight="900" text-anchor="middle" stroke="#063f06" stroke-width="0.6">DOWNLOAD</text>
+  </g>
+</svg>
