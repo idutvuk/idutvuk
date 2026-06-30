@@ -353,23 +353,44 @@ def sparkle_stamp(_c=[]):
     """Glowing yellow-white 4-point star."""
     if _c:
         return _c[0]
-    S = 13; c = S//2
+    S = 9; c = S//2
     s = Image.new("RGBA", (S, S), (0, 0, 0, 0)); d = ImageDraw.Draw(s)
     for r in range(c, 0, -1):                              # soft yellow glow halo
-        a = int(80 * (1 - r/c))
+        a = int(70 * (1 - r/c))
         d.ellipse([c-r, c-r, c+r, c+r], fill=(255, 224, 110, a))
     d.line([(c, 1), (c, S-2)], fill=(255, 255, 200, 255))  # star spikes
     d.line([(1, c), (S-2, c)], fill=(255, 255, 200, 255))
-    d.line([(c-3, c-3), (c+3, c+3)], fill=(255, 240, 150, 150))
-    d.line([(c-3, c+3), (c+3, c-3)], fill=(255, 240, 150, 150))
     d.ellipse([c-1, c-1, c+1, c+1], fill=(255, 255, 255, 255))
     _c.append(s)
     return s
 
 
+def rose_pattern():
+    """Seamless tiled rose wallpaper (pink bg, red roses, green leaves)."""
+    bgcol, rose, dark, light, leaf = (
+        (246, 201, 214), (194, 30, 86), (120, 12, 48), (236, 120, 160), (58, 125, 68))
+    T = 22
+    tile = Image.new("RGBA", (T, T), bgcol + (255,))
+    d = ImageDraw.Draw(tile)
+    cx, cy, r = T//2, T//2, 6
+    d.ellipse([cx-2, cy+2, cx-2+5, cy+2+4], fill=leaf)          # leaves
+    d.ellipse([cx-3, cy+3, cx+2, cy+7], fill=leaf)
+    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=rose)             # bloom
+    d.arc([cx-r, cy-r, cx+r, cy+r], 0, 360, fill=dark)
+    d.arc([cx-4, cy-4, cx+4, cy+4], 20, 300, fill=light)        # petal swirl
+    d.arc([cx-2, cy-2, cx+2, cy+2], 60, 340, fill=dark)
+    d.point((cx, cy), fill=dark)
+    pat = Image.new("RGBA", (W, H), bgcol + (255,))
+    for row, ty in enumerate(range(-T, H + T, T)):
+        off = (T//2) if row % 2 else 0                         # brick offset
+        for tx in range(-T + off, W + T, T):
+            pat.alpha_composite(tile, (tx, ty))
+    return pat
+
+
 def cute_base(name, label):
-    """Full-bleed photo background + outlined label (no plate, no icon)."""
-    bg = load_photo(name)
+    """Full-bleed background (photo / rose pattern) + outlined label."""
+    bg = rose_pattern() if name == "mongodb" else load_photo(name)
     d = ImageDraw.Draw(bg)
     f = fit_font("comic", label, W-8, 18)
     b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
@@ -383,18 +404,14 @@ def cute_base(name, label):
 def anim_cute(name, label):
     base = cute_base(name, label)
     star = sparkle_stamp()
-    spots = [(10, 6), (34, 25), (58, 5), (78, 24), (22, 26), (70, 7), (46, 27)]
+    spots = [(6, 5), (82, 5), (6, 26), (82, 26), (44, 4)]   # corners + top, off face
     frames, durs = [], []
     for k in range(6):
         fr = base.copy()
         for i, (sx, sy) in enumerate(spots):
-            ph = (i + k) % 3
-            if ph == 0:
-                continue                                   # off this frame
-            sz = star.width if ph == 1 else max(6, int(star.width*0.6))
-            st = star.resize((sz, sz), Image.LANCZOS)
-            fr.alpha_composite(st, (sx-sz//2, sy-sz//2))
-        frames.append(fr); durs.append(150)
+            if (i + k) % 2 == 0:                           # gentle twinkle
+                fr.alpha_composite(star, (sx-star.width//2, sy-star.height//2))
+        frames.append(fr); durs.append(170)
     return frames, durs
 
 
@@ -413,20 +430,26 @@ def ribbon_png(name, label, brand, fkey):
     return img
 
 
-def anim_logospin(name, bg, tint):
-    """2D Y-axis spin of the brand logo (horizontal squash + flip)."""
-    base, _ = render(name, "", bg, tint, tint, "raised", "jb", with_text=False)
+def anim_logospin(name, label, bg, tc):
+    """In-plane CCW spin of the brand logo; static label kept."""
+    base, _ = render(name, "", bg, tc, tc, "raised", "monaco", with_text=False)
+    d = ImageDraw.Draw(base)
+    zone = 30                                          # left logo zone width
+    maxw = W - zone - 5
+    f = fit_font("monaco", label, maxw)
+    b = f.getbbox(label); tw, th = b[2]-b[0], b[3]-b[1]
+    tx = zone + max(0, (maxw-tw)//2); ty = (H-th)//2 - b[1]
+    d.text((tx+1, ty+1), label, font=f, fill=shift(bg, -45))
+    d.text((tx, ty), label, font=f, fill=tc)           # static "docker"
     logo = render_icon(name, (255, 255, 255), h=22)
+    pad = Image.new("RGBA", (34, 34), (0, 0, 0, 0))
+    pad.alpha_composite(logo, ((34-logo.width)//2, (34-logo.height)//2))
     frames, durs, N = [], [], 12
     for k in range(N):
-        c = math.cos(2*math.pi*k/N)
-        w = max(2, int(logo.width*abs(c)))
-        sc = logo.resize((w, logo.height), Image.LANCZOS)
-        if c < 0:
-            sc = sc.transpose(Image.FLIP_LEFT_RIGHT)
-        sc = ImageEnhance.Brightness(sc).enhance(0.55 + 0.45*abs(c))
+        ang = 360.0 * k / N                            # CCW
+        r = pad.rotate(ang, resample=Image.BICUBIC, expand=False)
         fr = base.copy()
-        fr.alpha_composite(sc, ((W-w)//2, (H-logo.height)//2))
+        fr.alpha_composite(r, (zone//2 - 17, (H-34)//2))
         frames.append(fr); durs.append(85)
     return frames, durs
 
@@ -453,7 +476,7 @@ def make(name, label, bghex, style, fkey):
         elif style == "cute":
             fr, du = anim_cute(name, label); cols = 64
         elif style == "logospin":
-            fr, du = anim_logospin(name, brand, text_color(brand)); cols = 32
+            fr, du = anim_logospin(name, label, brand, text_color(brand)); cols = 32
         else:
             fr, du = builders[style](name, label, bg, tc, tint, fkey); cols = 48
         save_gif(os.path.join(OUT, f"{name}.gif"), fr, du, cols)

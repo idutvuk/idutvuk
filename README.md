@@ -4,12 +4,12 @@
 
 ![intro](https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=hi+there!;Python+Backend+%2F+GenAI+Developer;Cool+APIs;RAG+LLM+agents;Watch+Revolver(2005);capable+of+simple+frontend+things;)
 
-![Visitor count](https://komarev.com/ghpvc/?username=idutvuk&style=plastic&color=39d353&label=YOU+ARE+VISITOR+%23)
-
 ![GitHub Stats](images/wa-stats.svg)
 
 <img height="165" alt="GitHub stats" src="https://papka.zip/github_stats/api?username=idutvuk&show_icons=true&hide_title=true&include_all_commits=true&count_private=true&hide_rank=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" />
 <img height="165" alt="Top languages" src="https://papka.zip/github_stats/api/top-langs/?username=idutvuk&layout=compact&count_private=true&disable_animations=true&border_radius=0&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&border_color=39D353" />
+
+![Visitor count](https://komarev.com/ghpvc/?username=idutvuk&style=plastic&color=39d353&label=YOU+ARE+VISITOR+%23)
 
 **~ main stack ~**
 
