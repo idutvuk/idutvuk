@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" font-family="'Courier New',monospace" shape-rendering="crispEdges">
+  <rect x="0" y="0" width="88" height="31" fill="#3b2417"/>
+  <rect x="40" y="0" width="48" height="31" fill="#6f4e37"/>
+  <rect x="0.5" y="0.5" width="87" height="30" fill="none" stroke="#fff" stroke-width="1"/>
+  <rect x="1.5" y="1.5" width="85" height="28" fill="none" stroke="#404040" stroke-width="1"/>
+  <text x="20" y="14" fill="#e6c8a0" font-size="8" font-weight="bold" text-anchor="middle">POWERED</text><text x="20" y="24" fill="#e6c8a0" font-size="8" font-weight="bold" text-anchor="middle">BY</text>
+  <text x="64" y="14" fill="#ffe9c7" font-size="8" font-weight="bold" text-anchor="middle">COFFEE</text><text x="64" y="24" fill="#ffe9c7" font-size="8" font-weight="bold" text-anchor="middle">&amp; vim</text>
+</svg>

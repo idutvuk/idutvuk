@@ -5,7 +5,11 @@
 <!-- HERO -->
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=38&pause=900&color=39D353&center=true&vCenter=true&width=720&height=80&lines=Welcome+to+my+corner+of+the+web!;%D0%93%D0%B8%D1%80%D0%B8%D1%87%D0%B5%D0%B2+%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80;Python+Backend+%2F+GenAI+Developer;Made+with+vim+and+coffee" alt="Welcome to my GitHub profile" />
+<img height="86" src="images/wa-title.svg" alt="idutvuk's homepage" />
+
+<br />
+
+<img src="https://readme-typing-svg.demolab.com/?font=VT323&weight=700&size=36&pause=900&color=39D353&center=true&vCenter=true&width=720&height=70&lines=Welcome+to+my+corner+of+the+web!;Python+Backend+%2F+GenAI+Developer;RAG+%26+LLM+agents;Made+with+coffee" alt="intro" />
 
 <sub>📍 Moscow, Russia &nbsp;•&nbsp; 🐍 (mostly) python dev &nbsp;•&nbsp; 🤖 RAG &amp; LLM agents</sub>
 
@@ -13,7 +17,9 @@
 
 <br />
 
-<!-- SOCIAL TABLE -->
+<!-- LINKS -->
+<div align="center"><img height="48" src="images/wa-links.svg" alt="My Cool Links" /></div>
+
 <table width="100%" align="center">
 <tr>
 <td align="center" width="50%">
@@ -37,9 +43,6 @@
 </tr>
 </table>
 
-<br />
-
-<!-- CONTACT BADGES -->
 <div align="center">
 
 <a href="https://t.me/idutvuk"><img src="https://img.shields.io/badge/Telegram-%40idutvuk-26A5E4?style=plastic&logo=telegram&logoColor=white" alt="Telegram" /></a>
@@ -51,6 +54,8 @@
 <br />
 
 <!-- STATS -->
+<div align="center"><img height="48" src="images/wa-stats.svg" alt="GitHub Stats" /></div>
+
 <div align="center">
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=idutvuk&show_icons=true&hide_border=false&bg_color=000000&title_color=39D353&text_color=7CFF7C&icon_color=39D353&border_color=39D353" alt="GitHub stats" />
@@ -60,37 +65,31 @@
 
 <br />
 
-<!-- TECH -->
+<!-- VISITOR COUNT -->
 <div align="center">
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=plastic&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=plastic&logo=langchain&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=plastic&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-FF4438?style=plastic&logo=redis&logoColor=white" />
-<img src="https://img.shields.io/badge/Qdrant-DC244C?style=plastic&logo=qdrant&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=plastic&logo=docker&logoColor=white" />
+<img height="48" src="images/wa-visitors.svg" alt="Visitor Count" />
+
+<br /><br />
+
+<img src="https://komarev.com/ghpvc/?username=idutvuk&style=plastic&color=39d353&label=YOU+ARE+VISITOR+%23" alt="Visitor count" />
 
 </div>
 
 <br />
 
-<!-- FOOTER -->
+<!-- 88x31 BUTTON WALL -->
 <div align="center">
 
-<img width="100%" height="42" alt="Thanks for visiting!" src="images/marquee.svg" />
+<img height="31" src="images/b-notepad.svg" alt="Made with Notepad" />
+<img height="31" src="images/b-ie.svg" alt="Best viewed in any browser" />
+<img height="31" src="images/b-frames.svg" alt="Campaign against frames" />
+<img height="31" src="images/b-res.svg" alt="Optimized for 800x600" />
+<img height="31" src="images/b-html.svg" alt="Valid HTML 4.01" />
+<img height="31" src="images/b-python.svg" alt="Python powered" />
+<img height="31" src="images/b-coffee.svg" alt="Powered by coffee" />
 
 <br /><br />
-
-<img src="https://img.shields.io/badge/Best%20viewed%20in-Netscape%20Navigator-00FF00?style=plastic" />
-<img src="https://img.shields.io/badge/made%20with-vim-019733?style=plastic&logo=vim&logoColor=white" />
-<img src="https://img.shields.io/badge/HTML-4.01-FF8800?style=plastic" />
-
-<br /><br />
-
-<img alt="Visitor count" src="https://profile-counter.glitch.me/idutvuk/count.svg" />
-
-<br />
 
 <sub>© 1998–2026 idutvuk &nbsp;•&nbsp; this page is under eternal construction</sub>
 
