@@ -11,7 +11,7 @@
 
 ![Visitor count](https://komarev.com/ghpvc/?username=idutvuk&style=plastic&color=39d353&label=YOU+ARE+VISITOR+%23)
 
-**~ main stack ~**
+**main stack**
 
 [![python](images/badges/python.gif)](https://www.python.org) [![FastAPI](images/badges/fastapi.gif)](https://fastapi.tiangolo.com) [![SQLAlchemy](images/badges/sqlalchemy.png)](https://www.sqlalchemy.org) [![Alembic](images/badges/alembic.png)](https://alembic.sqlalchemy.org) [![Typst](images/badges/typst.gif)](https://typst.app)
 
@@ -21,7 +21,7 @@
 
 [![GNU/Linux](images/badges/linux.png)](https://kernel.org) [![git](images/badges/git.png)](https://git-scm.com) [![GitLab CI](images/badges/gitlab.gif)](https://about.gitlab.com)
 
-**~ sometimes use ~**
+**sometimes use**
 
 [![Django](images/badges/django.png)](https://www.djangoproject.com) [![React](images/badges/react.png)](https://react.dev) [![Kotlin](images/badges/kotlin.png)](https://kotlinlang.org) [![gRPC](images/badges/grpc.png)](https://grpc.io)
 
